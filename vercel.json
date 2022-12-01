@@ -3,7 +3,7 @@
     "routes":[
         {
             "src":"/api/resort",
-            "dest":"./app.js"
+            "dest":"app.js"
         }
     ]
 }
