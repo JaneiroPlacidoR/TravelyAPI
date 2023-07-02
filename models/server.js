@@ -8,7 +8,7 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-        this.resortPath = '/api/resort';
+        this.resortPath = '/travely/api';
 
         //conectar a database
         this.connectDB();
@@ -38,6 +38,7 @@ class Server {
         this.app.use(this.resortPath, require('../routes/room'));
         this.app.use(this.resortPath, require('../routes/resort'));
         this.app.use(this.resortPath, require('../routes/search'));
+        this.app.use(this.resortPath, require('../routes/destination'));
 
     }
 

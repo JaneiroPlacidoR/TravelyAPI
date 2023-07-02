@@ -15,11 +15,11 @@ const { validateFields,
 
 const router = Router();
 
-router.get('/', resortsGet);
+router.get('/resort', resortsGet);
 
-router.get('/:id', oneResortGet);
+router.get('/resort/:id', oneResortGet);
 
-router.post('/', [
+router.post('/resort', [
     //validation if fields are not empty
     check('name', 'Name is required').not().isEmpty(),
     check('img', 'Img is required').not().isEmpty(),
@@ -35,8 +35,8 @@ router.post('/', [
     validateFields
 ], resortPost);
 
-router.put('/:id', resortPut);
+router.put('/resort/:id', resortPut);
 
-router.delete('/:id', resortDelete);
+router.delete('/resort/:id', resortDelete);
 
 module.exports = router;
